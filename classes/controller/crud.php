@@ -86,7 +86,7 @@ abstract class Controller_Crud extends \Fuel\Core\Controller_Rest
         else
         {
             // Grabbing all ORMs
-            $model = new $this->orm_model();
+            $model = new $this::$_orm_model();
             $orms = $model::find("all");
             $data = $this->plural_array($orms);
         }
